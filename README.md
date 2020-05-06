@@ -1,10 +1,8 @@
 ![Inxton logo](https://github.com/Inxton/documentation/raw/master/assets/logo.png)
 
-# Welcome
+# Inxton.Essentials - Template
 
-This repo contains ...
-
-# Getting started
+Clone this repository or [download zip](https://github.com/Inxton/template.essentials/archive/master.zip) to build something amazing with INXTON.
 
 ## Check the prerequisites
 
@@ -13,9 +11,14 @@ Make sure you have everything you need to start using examples in this repositor
 
 ## What to do next?
 
-Checkout documentation  [Inxton.Package.Vortex.Core](https://github.com/Inxton/documentation)
+Checkout documentation  [Inxton.Package.Vortex.Core](https://github.com/Inxton/documentation). [Inxton.Package.Vortex.Essentials](https://github.com/Inxton/Inxton.Package.Vortex.Essentials    )
+
+Checkout examples  [Examples - Inxton.Package.Vortex.Core](https://github.com/Inxton/Examples-Inxton.Package.Vortex.Core), [Examples-Inxton.Package.Vortex.Essentials
+](https://github.com/Inxton/Examples-Inxton.Package.Vortex.Essentials)
+
 
 Install the extension from [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Inxton.InxtonVortexBuilderExtensionPre)
+ 
 
 # Need help?
 
@@ -37,6 +40,7 @@ Just submit it [here](https://github.com/Inxton/Feedback/issues/new/choose)
 
 
 # License
+ 
 TL;DR;
 > Developers are encouraged to use this project -  free of charge, although when you want to use it in the production environment, you need to go to  [INXTON.com](https://www.inxton.com/) and purchase a license.
 
