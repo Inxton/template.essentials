@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Plc;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +14,9 @@ namespace WpfApp
     /// </summary>
     public partial class App : Application
     {
+        public App() : base()
+        {
+            Entry.Plc.Connector.BuildAndStart();
+        }
     }
 }
