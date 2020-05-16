@@ -38,9 +38,6 @@
     <Reference Include="Inxton.Licencing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3bf43df27f52305d, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Inxton.Vortex.Connector.0.117.0-preview.1\lib\netstandard2.0\Inxton.Licencing.dll</HintPath>
     </Reference>
-    <Reference Include="Inxton.Package.Vortex.Essentials.Wpf, Version=0.10.50.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Inxton.Package.Vortex.Essentials.Wpf.0.171.0-preview.2\lib\net48\Inxton.Package.Vortex.Essentials.Wpf.dll</HintPath>
-    </Reference>
     <Reference Include="MaterialDesignColors, Version=1.2.2.920, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Inxton.Vortex.Presentation.Controls.Wpf.0.120.0-preview.1\lib\net48\MaterialDesignColors.dll</HintPath>
     </Reference>
