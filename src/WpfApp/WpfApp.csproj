@@ -91,8 +91,12 @@
       <HintPath>..\..\packages\Inxton.Vortex.Presentation.Wpf.1.0.0\lib\net48\Vortex.Presentation.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
+    <Reference Include="PresentationCore">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
