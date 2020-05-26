@@ -16,6 +16,7 @@ namespace WpfApp
     {
         public App() : base()
         {
+            Entry.Plc.Connector.ReadWriteCycleDelay = 70; //[ms]
             Entry.Plc.Connector.BuildAndStart();
         }
     }
