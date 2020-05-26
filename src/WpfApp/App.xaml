@@ -1,4 +1,4 @@
-﻿<Application
+<Application
     x:Class="WpfApp.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -13,7 +13,6 @@
             <!--HERE YOU CAN OVERRIDE DEFAULT COLORS -->
             <Color x:Key="PrimaryColor">#5bc5f2</Color>
             <Color x:Key="OnPrimaryColor">#000000</Color>
-            
             <Color x:Key="SecondaryColor">#0494bf</Color>
             <Color x:Key="OnSecondaryColor">#ffffff</Color>
             <Color x:Key="BackgroundColor">#FFFFFF</Color>
