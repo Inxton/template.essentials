@@ -9,6 +9,19 @@ Clone this repository or [download zip](https://github.com/Inxton/template.essen
 Make sure you have everything you need to start using examples in this repository [here](https://github.com/Inxton/documentation/blob/master/PREREQUISITES.MD).
 
 
+### Update packages
+You may encounter this error message
+```
+The Vortex Builder does not exists
+=============== Build cancelled ===============
+```
+To fix this issue go to Package manager console and type `Update-Package -Reinstall`
+
+![packager_mngr_view](https://raw.githubusercontent.com/Inxton/documentation/master/common/assets/package_manager_console_view.png)
+![packager_mngr_cmd](https://raw.githubusercontent.com/Inxton/documentation/master/common/assets/package_manager_console_command.png)
+
+
+
 ## What to do next?
 
 Checkout [documentation](https://github.com/Inxton/documentation).
