@@ -14,23 +14,55 @@
     <Window.DataContext>
         <local:MainWindowModel />
     </Window.DataContext>
-    <Grid
-        HorizontalAlignment="Center"
-        VerticalAlignment="Center"
-        Style="{DynamicResource Card}">
-        <StackPanel Margin="24" VerticalAlignment="Center">
-            <TextBlock
-                FontSize="16"
-                FontWeight="DemiBold"
-                Text="Display" />
-            <vortex:RenderableContentControl DataContext="{Binding MAIN}" PresentationType="Display" />
-            <Separator Margin="10" />
-            <TextBlock
-                FontSize="16"
-                FontWeight="DemiBold"
-                Text="Control" />
+    <UniformGrid Style="{DynamicResource Card}" Margin="10">
+        <GroupBox Header="Standard" Margin="10">
+            <Grid
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Style="{DynamicResource Card}">
+            <StackPanel Margin="5" VerticalAlignment="Center">
+                <TextBlock
+                    FontSize="16"
+                    FontWeight="DemiBold"
+                    Text="Display" />
+                <vortex:RenderableContentControl DataContext="{Binding MAIN}" PresentationType="Display" />
+                <Separator Margin="10" />
+                <TextBlock
+                    FontSize="16"
+                    FontWeight="DemiBold"
+                    Text="Control" />
 
-            <vortex:RenderableContentControl DataContext="{Binding MAIN}" PresentationType="Control" />
-        </StackPanel>
-    </Grid>
+                <vortex:RenderableContentControl DataContext="{Binding MAIN}" PresentationType="Control" />
+            </StackPanel>
+        </Grid>
+        </GroupBox>
+        <GroupBox Header="Slim" Margin="10">
+            <Grid
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Style="{DynamicResource Card}">
+                <StackPanel Margin="5" VerticalAlignment="Center">
+                    <TextBlock
+                    FontSize="16"
+                    FontWeight="DemiBold"
+                    Text="Display" />
+                    
+                    <Grid Grid.IsSharedSizeScope="True">
+                        <vortex:RenderableContentControl DataContext="{Binding MAIN}" PresentationType="DisplaySlim" />
+                    </Grid>
+                    
+                    <Separator Margin="10" />
+                    
+                    <TextBlock
+                    FontSize="16"
+                    FontWeight="DemiBold"
+                    Text="Control" />
+
+                    <Grid Grid.IsSharedSizeScope="True">
+                        <vortex:RenderableContentControl DataContext="{Binding MAIN}" PresentationType="ControlSlim" />
+                    </Grid>
+                </StackPanel>
+            </Grid>
+        </GroupBox>
+    </UniformGrid>
 </Window>

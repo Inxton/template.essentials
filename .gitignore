@@ -202,7 +202,5 @@ _Vortex/pal.txt
 _Vortex/*.dll
 _Vortex/*.exe
 _Vortex/builder/**
-/Doc/Vortex.Connectors.Documentation/Help
-/docs/API/VortexBaseDocumentation/Help/VortexBaseDocumentation.chm
-/docs/API/VortexBaseDocumentation/Help/Working
-/docs/API/VortexBaseDocumentation/Help
+_Vortex/CompilerCache.md
+
