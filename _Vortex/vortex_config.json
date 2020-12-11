@@ -1,7 +1,7 @@
 {
   "ConfigFile": null,
-  "OutputDirectory": "C:\\MTS\\Develop\\GitHub\\Inxton.Package.Vortex.Essentials\\template\\_Vortex\\out",
-  "SolutionPath": "C:\\MTS\\Develop\\GitHub\\Inxton.Package.Vortex.Essentials\\template\\template.sln",
+  "OutputDirectory": "C:\\MTS\\Develop\\GitHub\\template.essentials\\_Vortex\\out",
+  "SolutionPath": "C:\\MTS\\Develop\\GitHub\\template.essentials\\template.sln",
   "CompilableAttributesSignatures": [
     "wpf",
     "clr"
