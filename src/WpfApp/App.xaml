@@ -9,9 +9,9 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/Vortex.Presentation.Styling.Wpf;component/VortexStyle.xaml" />
             </ResourceDictionary.MergedDictionaries>
-            
-            <!--HERE YOU CAN OVERRIDE DEFAULT COLORS -->
-            <Color x:Key="PrimaryColor">#5bc5f2</Color>
+
+            <!--  HERE YOU CAN OVERRIDE DEFAULT COLORS  -->
+            <!--<Color x:Key="PrimaryColor">#5bc5f2</Color>
             <Color x:Key="OnPrimaryColor">#000000</Color>
             <Color x:Key="SecondaryColor">#0494bf</Color>
             <Color x:Key="OnSecondaryColor">#ffffff</Color>
@@ -28,8 +28,8 @@
             <Color x:Key="WarningColor">#ff4b27</Color>
             <Color x:Key="OnWarningColor">#000000</Color>
             <Color x:Key="SingalOffColor">#000000</Color>
-            <Color x:Key="SignalOnColor">#FF2200</Color>
-            
+            <Color x:Key="SignalOnColor">#FF2200</Color>-->
+
 
             <SolidColorBrush x:Key="Primary" Color="{StaticResource PrimaryColor}" />
             <SolidColorBrush x:Key="OnPrimary" Color="{StaticResource OnPrimaryColor}" />
@@ -52,11 +52,11 @@
             <SolidColorBrush x:Key="Alert" Color="{StaticResource AlertColor}" />
             <SolidColorBrush x:Key="OnAlert" Color="{StaticResource OnAlertColor}" />
 
-            <SolidColorBrush x:Key="Warning" Color="{StaticResource WarningColor}"/>
-            <SolidColorBrush x:Key="OnWarning" Color="{StaticResource OnWarningColor}"/>
+            <SolidColorBrush x:Key="Warning" Color="{StaticResource WarningColor}" />
+            <SolidColorBrush x:Key="OnWarning" Color="{StaticResource OnWarningColor}" />
 
-            <SolidColorBrush x:Key="SignalOn" Color="{StaticResource SignalOnColor}"/>
-            <SolidColorBrush x:Key="SignalOff" Color="{StaticResource SignalOffColor}"/>
+            <SolidColorBrush x:Key="SignalOn" Color="{StaticResource SignalOnColor}" />
+            <SolidColorBrush x:Key="SignalOff" Color="{StaticResource SignalOffColor}" />
         </ResourceDictionary>
     </Application.Resources>
 </Application>
