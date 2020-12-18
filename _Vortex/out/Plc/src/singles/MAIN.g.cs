@@ -30,8 +30,8 @@ namespace Plc
 		}
 
 		protected string _humanReadable;
-		Vortex.Connector.ValueTypes.OnlinerString _Hello_World;
-		public Vortex.Connector.ValueTypes.OnlinerString Hello_World
+		stTreeStruct _Hello_World;
+		public stTreeStruct Hello_World
 		{
 			get
 			{
@@ -39,7 +39,7 @@ namespace Plc
 			}
 		}
 
-		Vortex.Connector.ValueTypes.Online.IOnlineString IMAIN.Hello_World
+		IstTreeStruct IMAIN.Hello_World
 		{
 			get
 			{
@@ -47,86 +47,34 @@ namespace Plc
 			}
 		}
 
-		Vortex.Connector.ValueTypes.Shadows.IShadowString IShadowMAIN.Hello_World
+		IShadowstTreeStruct IShadowMAIN.Hello_World
 		{
 			get
 			{
 				return Hello_World;
-			}
-		}
-
-		Vortex.Connector.ValueTypes.OnlinerInt _Counter;
-		public Vortex.Connector.ValueTypes.OnlinerInt Counter
-		{
-			get
-			{
-				return _Counter;
-			}
-		}
-
-		Vortex.Connector.ValueTypes.Online.IOnlineInt IMAIN.Counter
-		{
-			get
-			{
-				return Counter;
-			}
-		}
-
-		Vortex.Connector.ValueTypes.Shadows.IShadowInt IShadowMAIN.Counter
-		{
-			get
-			{
-				return Counter;
-			}
-		}
-
-		Vortex.Connector.ValueTypes.OnlinerString _Variable;
-		public Vortex.Connector.ValueTypes.OnlinerString Variable
-		{
-			get
-			{
-				return _Variable;
-			}
-		}
-
-		Vortex.Connector.ValueTypes.Online.IOnlineString IMAIN.Variable
-		{
-			get
-			{
-				return Variable;
-			}
-		}
-
-		Vortex.Connector.ValueTypes.Shadows.IShadowString IShadowMAIN.Variable
-		{
-			get
-			{
-				return Variable;
 			}
 		}
 
 		public void LazyOnlineToShadow()
 		{
-			Hello_World.Shadow = Hello_World.LastValue;
-			Counter.Shadow = Counter.LastValue;
-			Variable.Shadow = Variable.LastValue;
+			Hello_World.LazyOnlineToShadow();
 		}
 
 		public void LazyShadowToOnline()
 		{
-			Hello_World.Cyclic = Hello_World.Shadow;
-			Counter.Cyclic = Counter.Shadow;
-			Variable.Cyclic = Variable.Shadow;
+			Hello_World.LazyShadowToOnline();
 		}
 
 		public PlainMAIN CreatePlainerType()
 		{
 			var cloned = new PlainMAIN();
+			cloned.Hello_World = Hello_World.CreatePlainerType();
 			return cloned;
 		}
 
 		protected PlainMAIN CreatePlainerType(PlainMAIN cloned)
 		{
+			cloned.Hello_World = Hello_World.CreatePlainerType();
 			return cloned;
 		}
 
@@ -257,12 +205,8 @@ namespace Plc
 			_humanReadable = Vortex.Connector.IConnector.CreateSymbol(parent.HumanReadable, readableTail);
 			PexPreConstructor(parent, readableTail, symbolTail);
 			Symbol = Vortex.Connector.IConnector.CreateSymbol(parent.Symbol, symbolTail);
-			_Hello_World = @Connector.Online.Adapter.CreateSTRING(this, "Hello world", "Hello_World");
-			Hello_World.AttributeName = "Hello world";
-			_Counter = @Connector.Online.Adapter.CreateINT(this, "Counter", "Counter");
-			Counter.AttributeName = "Counter";
-			_Variable = @Connector.Online.Adapter.CreateSTRING(this, "Change me", "Variable");
-			Variable.AttributeName = "Change me";
+			_Hello_World = new stTreeStruct(this, "<#Hello world#>", "Hello_World");
+			_Hello_World.AttributeName = "<#Hello world#>";
 			AttributeName = "";
 			PexConstructor(parent, readableTail, symbolTail);
 			parent.AddChild(this);
@@ -271,12 +215,8 @@ namespace Plc
 		public MAIN()
 		{
 			PexPreConstructorParameterless();
-			_Hello_World = Vortex.Connector.IConnectorFactory.CreateSTRING();
-			Hello_World.AttributeName = "Hello world";
-			_Counter = Vortex.Connector.IConnectorFactory.CreateINT();
-			Counter.AttributeName = "Counter";
-			_Variable = Vortex.Connector.IConnectorFactory.CreateSTRING();
-			Variable.AttributeName = "Change me";
+			_Hello_World = new stTreeStruct();
+			_Hello_World.AttributeName = "<#Hello world#>";
 			AttributeName = "";
 			PexConstructorParameterless();
 		}
@@ -298,17 +238,7 @@ namespace Plc
             /// <exclude />
 	public partial interface IMAIN : Vortex.Connector.IVortexOnlineObject
 	{
-		Vortex.Connector.ValueTypes.Online.IOnlineString Hello_World
-		{
-			get;
-		}
-
-		Vortex.Connector.ValueTypes.Online.IOnlineInt Counter
-		{
-			get;
-		}
-
-		Vortex.Connector.ValueTypes.Online.IOnlineString Variable
+		IstTreeStruct Hello_World
 		{
 			get;
 		}
@@ -331,17 +261,7 @@ namespace Plc
             /// <exclude />
 	public partial interface IShadowMAIN : Vortex.Connector.IVortexShadowObject
 	{
-		Vortex.Connector.ValueTypes.Shadows.IShadowString Hello_World
-		{
-			get;
-		}
-
-		Vortex.Connector.ValueTypes.Shadows.IShadowInt Counter
-		{
-			get;
-		}
-
-		Vortex.Connector.ValueTypes.Shadows.IShadowString Variable
+		IShadowstTreeStruct Hello_World
 		{
 			get;
 		}
@@ -363,8 +283,8 @@ namespace Plc
             /// <exclude />
 	public partial class PlainMAIN : System.ComponentModel.INotifyPropertyChanged, Vortex.Connector.IPlain
 	{
-		System.String _Hello_World;
-		public System.String Hello_World
+		PlainstTreeStruct _Hello_World;
+		public PlainstTreeStruct Hello_World
 		{
 			get
 			{
@@ -381,47 +301,9 @@ namespace Plc
 			}
 		}
 
-		System.Int16 _Counter;
-		public System.Int16 Counter
-		{
-			get
-			{
-				return _Counter;
-			}
-
-			set
-			{
-				if (_Counter != value)
-				{
-					_Counter = value;
-					PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(Counter)));
-				}
-			}
-		}
-
-		System.String _Variable;
-		public System.String Variable
-		{
-			get
-			{
-				return _Variable;
-			}
-
-			set
-			{
-				if (_Variable != value)
-				{
-					_Variable = value;
-					PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(Variable)));
-				}
-			}
-		}
-
 		public void CopyPlainToCyclic(Plc.MAIN target)
 		{
-			target.Hello_World.Cyclic = Hello_World;
-			target.Counter.Cyclic = Counter;
-			target.Variable.Cyclic = Variable;
+			Hello_World.CopyPlainToCyclic(target.Hello_World);
 		}
 
 		public void CopyPlainToCyclic(Plc.IMAIN target)
@@ -431,9 +313,7 @@ namespace Plc
 
 		public void CopyPlainToShadow(Plc.MAIN target)
 		{
-			target.Hello_World.Shadow = Hello_World;
-			target.Counter.Shadow = Counter;
-			target.Variable.Shadow = Variable;
+			Hello_World.CopyPlainToShadow(target.Hello_World);
 		}
 
 		public void CopyPlainToShadow(Plc.IShadowMAIN target)
@@ -443,9 +323,7 @@ namespace Plc
 
 		public void CopyCyclicToPlain(Plc.MAIN source)
 		{
-			Hello_World = source.Hello_World.LastValue;
-			Counter = source.Counter.LastValue;
-			Variable = source.Variable.LastValue;
+			Hello_World.CopyCyclicToPlain(source.Hello_World);
 		}
 
 		public void CopyCyclicToPlain(Plc.IMAIN source)
@@ -455,9 +333,7 @@ namespace Plc
 
 		public void CopyShadowToPlain(Plc.MAIN source)
 		{
-			Hello_World = source.Hello_World.Shadow;
-			Counter = source.Counter.Shadow;
-			Variable = source.Variable.Shadow;
+			Hello_World.CopyShadowToPlain(source.Hello_World);
 		}
 
 		public void CopyShadowToPlain(Plc.IShadowMAIN source)
@@ -468,6 +344,7 @@ namespace Plc
 		public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
 		public PlainMAIN()
 		{
+			_Hello_World = new PlainstTreeStruct();
 		}
 	}
 }

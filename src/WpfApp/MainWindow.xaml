@@ -14,23 +14,21 @@
     <Window.DataContext>
         <local:MainWindowModel />
     </Window.DataContext>
-    <UniformGrid Style="{DynamicResource Card}" Margin="10">
-        <GroupBox Header="Standard" Margin="10">
-            <Grid
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            Style="{DynamicResource Card}">
-            <StackPanel Margin="5" VerticalAlignment="Center">
-                <TextBlock
-                    FontSize="16"
-                    FontWeight="DemiBold"
-                    Text="Display" />
-                <vortex:RenderableContentControl DataContext="{Binding MAIN}" PresentationType="Display" />
-                <Separator Margin="10" />
-                <TextBlock
-                    FontSize="16"
-                    FontWeight="DemiBold"
-                    Text="Control" />
+    <Grid
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+        Style="{DynamicResource Card}">
+        <StackPanel Margin="12" VerticalAlignment="Center">
+            <TextBlock
+                FontSize="16"
+                FontWeight="DemiBold"
+                Text="Display" />
+            <vortex:RenderableContentControl DataContext="{Binding MAIN}" PresentationType="Display" />
+            <Separator Margin="10" />
+            <TextBlock
+                FontSize="16"
+                FontWeight="DemiBold"
+                Text="Control" />
 
                 <vortex:RenderableContentControl DataContext="{Binding MAIN}" PresentationType="Control" />
             </StackPanel>
