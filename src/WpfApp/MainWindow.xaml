@@ -7,60 +7,130 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vortex="http://vortex.mts/xaml"
     Title="MainWindow"
-    Width="375"
-    Height="500"
     Background="{DynamicResource Surface}"
     mc:Ignorable="d">
     <Window.DataContext>
         <local:MainWindowModel />
     </Window.DataContext>
     <Grid
-        HorizontalAlignment="Center"
-        VerticalAlignment="Center"
+        Margin="10"
+        Background="{DynamicResource Background}"
         Style="{DynamicResource Card}">
-        <StackPanel Margin="12" VerticalAlignment="Center">
-            <TextBlock
-                FontSize="16"
-                FontWeight="DemiBold"
-                Text="Display" />
-            <vortex:RenderableContentControl DataContext="{Binding MAIN}" PresentationType="Display" />
-            <Separator Margin="10" />
-            <TextBlock
-                FontSize="16"
-                FontWeight="DemiBold"
-                Text="Control" />
-
-                <vortex:RenderableContentControl DataContext="{Binding MAIN}" PresentationType="Control" />
-            </StackPanel>
-        </Grid>
-        </GroupBox>
-        <GroupBox Header="Slim" Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
             <Grid
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            Style="{DynamicResource Card}">
-                <StackPanel Margin="5" VerticalAlignment="Center">
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Style="{DynamicResource Card}">
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
                     <TextBlock
-                    FontSize="16"
-                    FontWeight="DemiBold"
-                    Text="Display" />
-                    
-                    <Grid Grid.IsSharedSizeScope="True">
-                        <vortex:RenderableContentControl DataContext="{Binding MAIN}" PresentationType="DisplaySlim" />
-                    </Grid>
-                    
-                    <Separator Margin="10" />
-                    
+                        Grid.Row="0"
+                        FontSize="16"
+                        FontWeight="DemiBold"
+                        Text="Display" />
+                    <vortex:RenderableContentControl
+                        Grid.Row="1"
+                        DataContext="{Binding MAIN}"
+                        PresentationType="Display" />
                     <TextBlock
-                    FontSize="16"
-                    FontWeight="DemiBold"
-                    Text="Control" />
-
-                    <Grid Grid.IsSharedSizeScope="True">
-                        <vortex:RenderableContentControl DataContext="{Binding MAIN}" PresentationType="ControlSlim" />
-                    </Grid>
-                </StackPanel>
+                        Grid.Row="2"
+                        FontSize="16"
+                        FontWeight="DemiBold"
+                        Text="Control" />
+                    <vortex:RenderableContentControl
+                        Grid.Row="3"
+                        DataContext="{Binding MAIN}"
+                        PresentationType="Control" />
+                </Grid>
             </Grid>
-        </GroupBox>
-    </UniformGrid>
+
+            <Grid
+                Grid.Column="1"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Style="{DynamicResource Card}">
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <TextBlock
+                        Grid.Row="0"
+                        FontSize="16"
+                        FontWeight="DemiBold"
+                        Text="Display" />
+
+                    <vortex:RenderableContentControl
+                        Grid.Row="1"
+                        DataContext="{Binding MAIN}"
+                        PresentationType="DisplaySlim" />
+
+
+                    <TextBlock
+                        Grid.Row="2"
+                        FontSize="16"
+                        FontWeight="DemiBold"
+                        Text="Control" />
+
+                    <vortex:RenderableContentControl
+                        Grid.Row="3"
+                        DataContext="{Binding MAIN}"
+                        PresentationType="ControlSlim" />
+                </Grid>
+            </Grid>
+
+            <Grid
+                Grid.Column="2"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Grid.IsSharedSizeScope="True"
+                Style="{DynamicResource Card}">
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <TextBlock
+                        Grid.Row="0"
+                        FontSize="16"
+                        FontWeight="DemiBold"
+                        Text="Display" />
+
+                    <vortex:RenderableContentControl
+                        Grid.Row="1"
+                        DataContext="{Binding MAIN}"
+                        PresentationType="DisplaySlim" />
+
+
+                    <TextBlock
+                        Grid.Row="2"
+                        FontSize="16"
+                        FontWeight="DemiBold"
+                        Text="Control" />
+
+                    <vortex:RenderableContentControl
+                        Grid.Row="3"
+                        DataContext="{Binding MAIN}"
+                        PresentationType="ControlSlim" />
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
 </Window>
