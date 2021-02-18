@@ -15,6 +15,8 @@
     <Implicit_KindOfTask>{8f6c4742-7ec3-4f33-b6ce-1b9ffdcafb90}</Implicit_KindOfTask>
     <Implicit_Jitter_Distribution>{053a0bb7-9874-49ce-9318-076bc7e91075}</Implicit_Jitter_Distribution>
     <LibraryReferences>{5ec7f9f2-80fd-41d0-bc2a-d92de308d555}</LibraryReferences>
+    <DefaultNamespace>Plc</DefaultNamespace>
+    <Released>false</Released>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="DUTs\stBools.TcDUT">

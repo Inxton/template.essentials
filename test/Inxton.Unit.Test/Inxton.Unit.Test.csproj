@@ -9,7 +9,7 @@
 		<PackageReference Include="NUnit" Version="3.12.0" />
 		<PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
 		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0"/>
-		<PackageReference Include="Inxton.Package.Vortex.Core" Version="1.9.1-preview.3" />
+		<PackageReference Include="Inxton.Package.Vortex.Core" Version="1.9.2-preview.1" />
 		<ProjectReference Include="..\..\src\PLC\PlcConnector\PlcConnector.csproj" />
 	</ItemGroup>
 

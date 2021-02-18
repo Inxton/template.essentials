@@ -1,38 +1,28 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>net48</TargetFramework>
-    <AssemblyTitle>PlcConnector</AssemblyTitle>
-    <Product>PlcConnector</Product>
-    <Copyright>Copyright ©  2020</Copyright>
-  </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="..\..\..\_Vortex\out\Plc\src\singles\MAIN.g.cs" Link="_generated\Plc\MAIN.g.cs" />
-    <Compile Include="..\..\..\_Vortex\out\Plc\src\singles\Plc.g.cs" Link="_generated\Plc\Plc.g.cs" />
-    <Compile Include="..\..\..\_Vortex\out\Plc\src\singles\stBools.g.cs" Link="_generated\Plc\stBools.g.cs" />
-    <Compile Include="..\..\..\_Vortex\out\Plc\src\singles\stTreeStruct.g.cs" Link="_generated\Plc\stTreeStruct.g.cs" />
-  </ItemGroup>
- 
-  <ItemGroup>
-    <PackageReference Include="Inxton.Package.Vortex.Essentials" Version="1.9.1-preview.3" />
-    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
-  </ItemGroup>
-  
-  <ItemGroup>
-    <Folder Include="_generated\Plc\" />
-  </ItemGroup>
-  
-  <ItemGroup>
-    <Compile Update="Properties\Localizations.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Localizations.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  
-  <ItemGroup>
-    <EmbeddedResource Update="Properties\Localizations.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Localizations.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-  </ItemGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<AssemblyTitle>PlcConnector</AssemblyTitle>
+		<Product>PlcConnector</Product>
+		<Copyright>Copyright ©  2020</Copyright>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+		<PackageReference Include="Inxton.Package.Vortex.Essentials" Version="1.9.2-preview.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="Properties\Localizations.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Localizations.resx</DependentUpon>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Update="Properties\Localizations.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>Localizations.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+	</ItemGroup>
 </Project>

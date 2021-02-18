@@ -3,11 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{B1E792BE-AA5F-4E3C-8C82-674BF9C0715B}") = "TwinCAT", "src\PLC\TwinCAT\TwinCAT.tsproj", "{04DA3C61-60A5-4688-B334-23FF7165780A}"
-EndProject
+
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FBA0093E-C624-4321-9BDE-3682F111C2C9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PLC", "PLC", "{3C70075E-9673-4266-8CFA-B0A5C53E6946}"
+EndProject
+Project("{B1E792BE-AA5F-4E3C-8C82-674BF9C0715B}") = "TwinCAT", "src\PLC\TwinCAT\TwinCAT.tsproj", "{04DA3C61-60A5-4688-B334-23FF7165780A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlcConnector", "src\PLC\PlcConnector\PlcConnector.csproj", "{65F148DE-4919-43EC-BA5E-52E810125CA0}"
 EndProject
