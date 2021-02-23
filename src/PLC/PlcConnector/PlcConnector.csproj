@@ -5,20 +5,10 @@
     <Product>PlcConnector</Product>
     <Copyright>Copyright ©  2020</Copyright>
   </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="..\..\..\_Vortex\out\Plc\src\singles\MAIN.g.cs" Link="_generated\Plc\MAIN.g.cs" />
-    <Compile Include="..\..\..\_Vortex\out\Plc\src\singles\Plc.g.cs" Link="_generated\Plc\Plc.g.cs" />
-    <Compile Include="..\..\..\_Vortex\out\Plc\src\singles\stBools.g.cs" Link="_generated\Plc\stBools.g.cs" />
-    <Compile Include="..\..\..\_Vortex\out\Plc\src\singles\stTreeStruct.g.cs" Link="_generated\Plc\stTreeStruct.g.cs" />
-  </ItemGroup>
  
   <ItemGroup>
-    <PackageReference Include="Inxton.Package.Vortex.Essentials" Version="1.6.5" />
+    <PackageReference Include="Inxton.Package.Vortex.Essentials" Version="1.9.3" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
-  </ItemGroup>
-  
-  <ItemGroup>
-    <Folder Include="_generated\Plc\" />
   </ItemGroup>
   
   <ItemGroup>
