@@ -7,8 +7,8 @@
   </PropertyGroup>
  
   <ItemGroup>
-    <PackageReference Include="Inxton.Package.Vortex.Essentials" Version="1.9.4" />
-    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+	<PackageReference Include="Inxton.Package.Vortex.Essentials" Version="1.9.6" />
+    <PackageReference Include="Inxton.Vortex.Compiler.Console" Version="1.9.6" />
   </ItemGroup>
   
   <ItemGroup>
